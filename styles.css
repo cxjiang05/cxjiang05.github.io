@@ -136,6 +136,8 @@ p {
   max-width: 1100px;
   margin-top: 50px;
   margin-bottom: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 #hero-text {
@@ -252,9 +254,12 @@ p {
 
 .sections {
   margin-bottom: 250x;
-  margin-top: 120px;
+  margin-top: 50px;
   border-top: 1px solid #4e6472;
   padding-top: 65px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-bottom: 50px;
 }
 
 .sectionIcon {
@@ -295,6 +300,43 @@ p {
   margin-right: 20px;
   width: 300px;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .projectCards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: auto;
+    margin-right: 0;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #hero-text {
+    margin: 40px 0 0;
+    width: 100%;
+  }
+
+  #heroImage {
+    display: flex;
+    margin-top: 35px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #heroImage .selfie {
+    margin: 0px;
+    width: 250px;
+    max-width: 80%;
+    height: auto;
+
+    border-radius: 24px;
+  }
 }
 
 .projectName {
@@ -382,4 +424,79 @@ p {
   100% {
     background-position: 0% 50%;
   }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #1e252d 0%, #243640 100%);
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 380px;
+  transition: 0.3s ease;
+}
+
+.timelineItem h3 {
+  color: #e0f7fa;
+}
+
+.timelineItem h4 {
+  color: #c1d7dd;
+}
+
+.timelineItem h5 {
+  color: #80deea;
+}
+
+.timelineItem:hover {
+  background: linear-gradient(135deg, #263744 0%, #2a3742 100%);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.timelineItem::before {
+  content: "";
+  position: absolute;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #80deea;
+  border-radius: 50%;
+
+  left: -36px;
+  top: 5px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+
+  width: 2px;
+  background-color: #344550;
+
+  left: 10px;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline h3,
+h4,
+h5 {
+  color: white;
+  font-family: sans-serif;
+}
+
+.contactButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
